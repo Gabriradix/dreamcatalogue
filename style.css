@@ -102,20 +102,20 @@ body {
 
 #dream-count-label {
     color: var(--dim);
-    font-size: 9px;
+    font-size: 11px;
 }
 
 #clock {
     color: var(--dim);
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: 0.15em;
     font-variant-numeric: tabular-nums;
 }
 
 #lang-toggle {
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: 0.2em;
-    padding: 3px 10px;
+    padding: 4px 12px;
     border-color: rgba(255, 255, 255, 0.3);
     color: rgba(255, 255, 255, 0.6);
     margin-right: 8px;
@@ -158,21 +158,22 @@ body {
 
 .filter-label {
     color: var(--dim);
-    font-size: 8px;
-    letter-spacing: 0.15em;
+    font-size: 11px;
+    letter-spacing: 0.2em;
     white-space: nowrap;
 }
 
 .filter-btn {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.4);
-    font-family: var(--mono);
-    font-size: 8px;
-    letter-spacing: 0.15em;
-    padding: 3px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11px;
+    padding: 5px 14px;
+    border-radius: 0;
     cursor: pointer;
-    transition: all 0.15s;
+    font-family: var(--mono);
+    transition: all 0.2s;
+    letter-spacing: 0.1em;
     white-space: nowrap;
 }
 
@@ -376,7 +377,7 @@ body {
 
 .metric-label {
     display: block;
-    font-size: 7px;
+    font-size: 9px;
     color: var(--dim);
     letter-spacing: 0.2em;
     margin-bottom: 3px;
@@ -408,7 +409,7 @@ body {
 }
 
 .metric-val {
-    font-size: 8px;
+    font-size: 10px;
     color: var(--dim);
     min-width: 30px;
     text-align: right;
@@ -416,7 +417,7 @@ body {
 
 /* Panel sections */
 .section-label {
-    font-size: 7px;
+    font-size: 9px;
     color: var(--dim);
     letter-spacing: 0.2em;
     margin-bottom: 6px;
@@ -426,8 +427,8 @@ body {
 .tag {
     display: inline-block;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 2px 7px;
-    font-size: 8px;
+    padding: 3px 9px;
+    font-size: 10px;
     letter-spacing: 0.08em;
     margin: 2px 2px 2px 0;
     color: rgba(255, 255, 255, 0.6);
@@ -439,7 +440,7 @@ body {
 }
 
 .tag.flag-tag {
-    font-size: 7px;
+    font-size: 9px;
 }
 
 .tag.flag-active {
@@ -473,8 +474,8 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 5px 8px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     cursor: pointer;
     transition: background 0.15s;
 }
@@ -483,20 +484,27 @@ body {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.connection-item .conn-id {
-    font-size: 7px;
+.conn-id {
     color: var(--dim);
+    font-family: var(--mono);
+    font-size: 10px;
+    min-width: 24px;
 }
 
-.connection-item .conn-title {
-    font-size: 8px;
+.conn-title {
+    color: var(--fg);
     flex: 1;
-    letter-spacing: 0.04em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
 }
 
-.connection-item .conn-shared {
-    font-size: 7px;
-    color: rgba(255, 255, 255, 0.3);
+.conn-shared {
+    color: var(--dim);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 /* ─── LEGEND ────────────────────────────────────────────────────── */
@@ -513,6 +521,8 @@ body {
     transform: translateX(-100%);
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(6px);
+    color: var(--fg);
+    font-size: 11px;
 }
 
 #legend.legend-open {
@@ -529,11 +539,11 @@ body {
     border-left: none;
     color: rgba(255, 255, 255, 0.5);
     font-family: var(--mono);
-    font-size: 7px;
+    font-size: 11px;
     letter-spacing: 0.18em;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    padding: 10px 5px;
+    padding: 14px 6px;
     cursor: pointer;
     transition: color 0.2s, border-color 0.2s, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(4px);
@@ -552,15 +562,15 @@ body {
 }
 
 #legend-title {
-    font-size: 7px;
-    color: var(--dim);
-    letter-spacing: 0.2em;
-    margin-bottom: 6px;
-    cursor: pointer;
-    user-select: none;
+    margin-bottom: 12px;
+    font-weight: normal;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    opacity: 0.6;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 6px;
+    cursor: pointer;
     padding-bottom: 4px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     transition: color 0.15s;
@@ -572,7 +582,7 @@ body {
 
 .legend-item {
     cursor: pointer;
-    padding: 2px 0;
+    padding: 3px 0;
     border-radius: 0;
     transition: opacity 0.2s;
 }
@@ -604,10 +614,9 @@ body {
     flex-shrink: 0;
 }
 
-.legend-text {
-    font-size: 7px;
-    color: var(--dim);
-    letter-spacing: 0.08em;
+#legend-items .legend-text {
+    font-size: 10px;
+    letter-spacing: 0.1em;
 }
 
 /* ─── STATS ─────────────────────────────────────────────────────── */
@@ -640,13 +649,17 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 20px;
+    height: 22px;
+    background: rgba(0, 0, 0, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--fg);
+    font-family: var(--mono);
+    font-size: 11px;
     display: flex;
     align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 100;
+    white-space: nowrap;
+    z-index: 1000;
 }
 
 #ticker-content {
@@ -670,16 +683,20 @@ body {
 
 /* ─── DATA STREAM ───────────────────────────────────────────────── */
 #data-stream {
-    position: absolute;
-    right: 4px;
+    position: fixed;
     bottom: 30px;
-    font-size: 7px;
-    color: rgba(255, 255, 255, 0.07);
-    letter-spacing: 0.1em;
-    pointer-events: none;
-    line-height: 1.6;
-    text-align: right;
+    right: 20px;
+    width: 280px;
+    color: var(--fg);
+    font-size: 11px;
     font-family: var(--mono);
+    text-align: right;
+    pointer-events: none;
+    z-index: 50;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 /* ─── GLITCH animation ──────────────────────────────────────────── */
