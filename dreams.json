@@ -724,5 +724,28 @@
     "prospettiva": "prima persona",
     "bianco e nero": false,
     "musica": ""
+  },
+  {
+    "id": 32,
+    "data": "25/02/2026",
+    "titolo": "bel panorama",
+    "ricordo_percentuale": 55,
+    "importanza_soggettiva": 70,
+    "lucidita": 15,
+    "bizzarria": 10,
+    "mood_principale": ["erotismo", "gioia"],
+    "persone": {
+      "quantita": 1,
+      "tipologia": ["partner", "dei"],
+      "volti_definiti": true
+    },
+    "oggetti_chiave": [""],
+    "ambientazione": ["villa a scopello"],
+    "elementi_naturali": ["panorama", "mare", "cielo", "sole", "montagna"],
+    "frequenza": "1",
+    "durata_percepita_min": 25,
+    "prospettiva": "prima persona",
+    "bianco e nero": false,
+    "musica": ""
   }
 ]
